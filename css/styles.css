@@ -1,0 +1,141 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+/**********************
+*   NAVBAR SECTION
+***********************/
+.navbar {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  background-color: black;
+  color: white;
+}
+
+.logo {
+  margin: 0;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item {
+  padding: 0.5rem 10px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: rgb(65, 65, 65);
+}
+/**********************
+*   GALLERY SECTION
+***********************/
+.container {
+  padding-top: 10px;
+  max-width: 999px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 100fr;
+  grid-template-rows: repeat(4, 100fr);
+  gap: 10px;
+}
+
+img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 50fr);
+  }
+
+  .navbar,
+  .menu {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .menu-item {
+    padding: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(3, 33fr);
+  }
+
+  .featured {
+    grid-column: 2 / 4;
+    grid-row: 1 / span 2;
+  }
+}
+
+/**********************
+*   FOOTER SECTION
+***********************/
+footer {
+  padding: 1.5rem 0;
+  margin-top: 1.5rem;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  max-width: 999px;
+  margin: auto;
+}
+
+.footer-menus {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0.9rem;
+}
+
+.footer-menu > li {
+  padding: 0.3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-section,
+  .footer-menus {
+    flex-direction: row;
+  }
+
+  .footer-section {
+    align-items: center;
+  }
+
+  .footer-menu {
+    margin-left: 2rem;
+  }
+}
